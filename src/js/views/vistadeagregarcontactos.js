@@ -28,7 +28,7 @@ export const VistaDeAgregarContactos = () => {
         </div>
         <button type="submit" className="btn btn-primary">Save</button>
         <Link to="/">
-        <p>or get back to conctact</p>
+        <p>Or get back to conctact</p>
         </Link>
       </form>
     </div>

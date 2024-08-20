@@ -3,6 +3,7 @@ h1{
     justify-content: center;
     margin-top: 1cm;
 }
+
 form{
     margin-left: 4cm;
     margin-right: 4cm;
@@ -29,6 +30,19 @@ p{
 .etiqueta{
     display:flex;
     margin-left: 1cm;
+}
+.contenedor_etiqueta{
+    margin-left: 1cm;
+}
+.datos{
+    display:flex;
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1cm;
+    margin-right: 1cm;
 }
 
 body{

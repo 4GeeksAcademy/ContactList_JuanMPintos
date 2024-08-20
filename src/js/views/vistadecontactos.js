@@ -8,6 +8,7 @@ import { Context } from "../store/appContext";
 export const VistaDeContactos = () =>{
     return (
         <div className="contenedor-de-contactos">
+            <h1>Agenda de Juan</h1>
             <Link to="/agregar" style={{textDecoration: "none"}}>
             <button type="button" className="btn btn-success" >Add new contact</button>
             </Link>
