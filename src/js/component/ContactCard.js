@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
 
-export const ContactCard = () => {
+export const ContactCard = ({contact}) => {
 
   const { store, actions } = useContext(Context);
 
@@ -18,10 +18,10 @@ export const ContactCard = () => {
           </div>
           <div className="datos col-md-8">
             <div className="card-body">
-              <h5 className="card-title">Full Name</h5>
-              <p className="card-text"><i className="fa-solid fa-location-dot">Address</i></p>
-              <p className="card-text"><i className="fa-solid fa-mobile-screen">Phone Number</i></p>
-              <p className="card-text"><i className="fa-solid fa-at">email@email.com</i></p>
+              <h5 className="card-title">{contact.name}</h5>
+              <p className="card-text"><i className="fa-solid fa-location-dot">{contact.address}</i></p>
+              <p className="card-text"><i className="fa-solid fa-mobile-screen">{contact.phone}</i></p>
+              <p className="card-text"><i className="fa-solid fa-at">{contact.email}</i></p>
             </div>
             <div className="botones">
               <i className="fa-solid fa-pen"></i>
