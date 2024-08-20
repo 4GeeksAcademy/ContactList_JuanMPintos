@@ -4,11 +4,11 @@ import { Context } from "../store/appContext";
 
 
 
-export const ContactCard = ({contact}) => {
+export const ContactCard = ({ contact }) => {
 
   const { store, actions } = useContext(Context);
 
-
+  console.log(store.contact)
   return (
     <div className="contenedor_etiqueta">
       <div className="card mb-3" style={{ "maxWidth": "540px" }}>
@@ -24,8 +24,8 @@ export const ContactCard = ({contact}) => {
               <p className="card-text"><i className="fa-solid fa-at">{contact.email}</i></p>
             </div>
             <div className="botones">
-              <i className="fa-solid fa-pen"></i>
-              <i className="fa-solid fa-trash"></i>
+              <i id="lapiz" className="fa-solid fa-pen" onClick={() => actions.editarContacto(contact.id) }></i>
+              <i id="cesto" className="fa-solid fa-trash" onClick={() => actions.borrarContacto(contact.id) }></i>
             </div>
           </div>
         </div>

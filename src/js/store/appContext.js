@@ -23,22 +23,8 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 
-			const cargarAgenda = () => {
-				fetch("https://playground.4geeks.com/contact/agendas/JuanMPintos")
-					.then(response => {
-						if (!response.ok) {
-							throw new Error("Error al cargar los contactos");
-						}
-						return response.json();
-					})
-					.then(data => {
-						console.log(data);
-						crearAgenda(data);
-					})
-					.catch(error => {
-						console.error("Hubo un problema", error);
-					});
-			}
+			state.actions.crearAgenda();
+			state.actions.cargarAgenda();
 
 
 
@@ -46,8 +32,11 @@ const injectContext = PassedComponent => {
 
 
 
-			//fin del useEfect//
-		}, []);
+
+
+
+		}, []);//fin del useEfect//
+
 
 
 		return (
