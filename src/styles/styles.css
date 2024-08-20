@@ -1,0 +1,36 @@
+h1{
+    display:flex;
+    justify-content: center;
+    margin-top: 1cm;
+}
+form{
+    margin-left: 4cm;
+    margin-right: 4cm;
+    margin-top: 1cm;
+}
+p{
+    margin-top: 0.5cm;
+}
+.btn{
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.btn-success{
+    display:flex;
+    justify-content: center;
+    max-width: 4cm;
+    margin: 1.5cm;
+}
+
+.etiqueta{
+    display:flex;
+    margin-left: 1cm;
+}
+
+body{
+    background-color: gainsboro
+}
