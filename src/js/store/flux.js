@@ -9,9 +9,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					address: "dkdkdkd",
 					id: "0"
 				},
+				
 
 
 			],
+			contactAEditar: {}
+			
 		},
 		actions: {
 
@@ -24,7 +27,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				)
 
 			},
-
 			crearAgenda: async () => {
 
 				const checkResponse = await fetch("https://playground.4geeks.com/contact/agendas/JuanMPintos");
@@ -66,19 +68,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 					alert("Contacto creado exitosamente");
 				}
 			},
-			editarContacto: async () => {
-				const response = await fetch(`https://playground.4geeks.com/contact/agendas/JuanMPintos/contacts/${contact.id}`, {
+			editarContacto: async (datosAEditar, navigate) => {
+				const response = await fetch(`https://playground.4geeks.com/contact/agendas/JuanMPintos/contacts/${datosAEditar.id}`, {
 					method: "PUT",
 					headers: {
 						"Content-Type": "application/json"
 					},
-					body: JSON.stringify()
+					body: JSON.stringify(datosAEditar)
 					})
 					if (response.ok){
 						console.log("Contacto editado satisfactoriamente")
+						getActions().cargarAgenda()
+						navigate("/")
 					}
+				
 			},
-
+			contactoAEditar: (contacto) => {
+				setStore({
+					contactAEditar: contacto
+				})
+			}
 
 
 		}//ACA CIERRA EL ACTION// 

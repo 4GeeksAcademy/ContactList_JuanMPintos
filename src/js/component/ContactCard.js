@@ -24,10 +24,10 @@ export const ContactCard = ({ contact }) => {
               <p className="card-text"><i className="fa-solid fa-at"></i>{contact.email}</p>
             </div>
             <div className="botones">
-              <Link to="/editar" style={{ textDecoration: "none", color: "black"}}>
-              <i id="lapiz" className="fa-solid fa-pen" /*onClick={() => actions.editarContacto(contact.id) }*/></i>
+              <Link to="/editar" style={{ textDecoration: "none", color: "black" }}>
+                <i id="lapiz" className="fa-solid fa-pen" onClick={() => actions.contactoAEditar(contact) }></i>
               </Link>
-              <i id="cesto" className="fa-solid fa-trash" onClick={() => actions.borrarContacto(contact.id) }></i>
+              <i id="cesto" className="fa-solid fa-trash" onClick={() => actions.borrarContacto(contact.id)}></i>
             </div>
           </div>
         </div>
