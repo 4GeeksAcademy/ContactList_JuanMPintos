@@ -35,7 +35,7 @@ const injectContext = PassedComponent => {
 
 
 
-		}, []);//fin del useEfect//
+		}, []);//ACA TERMINA EL USE_EFFECT//
 
 
 

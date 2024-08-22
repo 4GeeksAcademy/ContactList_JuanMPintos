@@ -3,11 +3,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			contact: [
 				{
-					name: "",
-					phone: "",
-					email: "",
-					address: "",
-					id: ""
+					name: "Juan",
+					phone: "123456",
+					email: "djjs@kaka",
+					address: "dkdkdkd",
+					id: "0"
 				},
 
 
@@ -45,13 +45,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				getActions().cargarAgenda();
 			},
-			agregarContacto: async () => {
+			agregarContacto: async (dataToSend) => {
 				const response = await fetch("https://playground.4geeks.com/contact/agendas/JuanMPintos/contacts", {
 					method: "POST",
 					header: {
-						"Conent-Type": "application/json"
+						"Content-Type": "application/json"
 					},
-					body: JSON.stringify([])
+					body: JSON.stringify(dataToSend)
 				})
 				if (response.ok) {
 					console.log("Contacto creado exitosamente")
@@ -61,7 +61,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(`https://playground.4geeks.com/contact/agendas/JuanMPintos/contacts/${contact.id}`, {
 					method: "PUT",
 					header: {
-						"Conent-Type": "application/json"
+						"Content-Type": "application/json"
 					},
 					body: JSON.stringify()
 					})

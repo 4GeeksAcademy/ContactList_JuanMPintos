@@ -14,7 +14,7 @@ export const VistaDeContactos = () => {
         <div className="contenedor-de-contactos">
             <h1>Agenda de Juan</h1>
             <Link to="/agregar" style={{ textDecoration: "none" }}>
-                <button type="button" className="btn btn-success" onClick={() => action.agregarContacto() } >Add new contact</button>
+                <button type="button" className="btn btn-success">Add new contact</button>
             </Link>
             {store.contact.map((contact) => {
                 return (
