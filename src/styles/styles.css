@@ -2,6 +2,10 @@ h1{
     display:flex;
     justify-content: center;
     margin-top: 1cm;
+    font-family: "Luckiest Guy", cursive;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 3cm;
 }
 
 form{
@@ -55,6 +59,16 @@ color:coral
 color: coral
 }
 
+.card-text{
+    display: flex;
+    gap: 0.3cm;
+}
+.contenedor_etiqueta{
+    padding-bottom: 1cm;
+}
 
-
+.porta-foto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;}
 

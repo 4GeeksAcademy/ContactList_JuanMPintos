@@ -24,14 +24,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				)
 
 			},
+
 			crearAgenda: async () => {
+
+				const checkResponse = await fetch("https://playground.4geeks.com/contact/agendas/JuanMPintos");
+				if (checkResponse.ok ) {
+					console.log("La agenda ya existe");
+					return;
+				}
+
 				const response = await fetch("https://playground.4geeks.com/contact/agendas/JuanMPintos", {
 					method: "POST",
-					header: {
+					headers: {
 						"Conent-Type": "application/json"
 					},
 					body: JSON.stringify()
 				})
+
 				if (response.ok) {
 					console.log("Agenda creada exitosamente")
 				}
@@ -48,19 +57,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 			agregarContacto: async (dataToSend) => {
 				const response = await fetch("https://playground.4geeks.com/contact/agendas/JuanMPintos/contacts", {
 					method: "POST",
-					header: {
+					headers: {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify(dataToSend)
 				})
 				if (response.ok) {
-					console.log("Contacto creado exitosamente")
+					alert("Contacto creado exitosamente");
 				}
 			},
 			editarContacto: async () => {
 				const response = await fetch(`https://playground.4geeks.com/contact/agendas/JuanMPintos/contacts/${contact.id}`, {
 					method: "PUT",
-					header: {
+					headers: {
 						"Content-Type": "application/json"
 					},
 					body: JSON.stringify()

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { VistaDeAgregarContactos } from "./views/vistadeagregarcontactos";
 import injectContext from "./store/appContext";
 import { VistaDeContactos } from "./views/vistadecontactos";
+import { VistaDeEditarContacto } from "./views/vistaeditarcontacto";
 
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -15,6 +16,7 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<VistaDeContactos />} />
 						<Route path="/agregar" element={<VistaDeAgregarContactos />} />
+						<Route path="/editar" element={<VistaDeEditarContacto />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 			</BrowserRouter>
