@@ -12,8 +12,8 @@ export const VistaDeEditarContacto = () => {
       setContacto({...contacto, [e.target.name]: e.target.value})
  }
     const handleSubmit = (e) => {
-e.preventDefault()
-actions.editarContacto(contacto, navigate)
+      e.preventDefault()
+    actions.editarContacto(contacto, navigate)
  }
   return(
         <div className="contenedor_editars_contacto">

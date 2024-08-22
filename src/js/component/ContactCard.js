@@ -25,7 +25,7 @@ export const ContactCard = ({ contact }) => {
             </div>
             <div className="botones">
               <Link to="/editar" style={{ textDecoration: "none", color: "black" }}>
-                <i id="lapiz" className="fa-solid fa-pen" onClick={() => actions.contactoAEditar(contact) }></i>
+                <i id="lapiz" className="fa-solid fa-pen" onClick={() => actions.contactoAEditar(contact)}></i>
               </Link>
               <i id="cesto" className="fa-solid fa-trash" onClick={() => actions.borrarContacto(contact.id)}></i>
             </div>
